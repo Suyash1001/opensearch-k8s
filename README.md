@@ -97,4 +97,10 @@ In a production environment:
 # Author
 
 Suyash Srivastava
+DevOps Engineer 
+
 GitHub: https://github.com/Suyash1001
+
+LinkedIn: www.linkedin.com/in/suyash-srivastava-9b7516229 
+
+E-Mail: srivastavas160@gmail.com

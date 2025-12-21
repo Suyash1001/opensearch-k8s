@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opensearch-data
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: data
+  template:
+    metadata:
+      labels:
+        role: data
+    spec:
+      containers:
+      - name: opensearch
+        image: opensearchproject/opensearch:2.11.0
+        ports:
+        - containerPort: 9200
+        - containerPort: 9600
+        env:
+        - name: cluster.name
+          value: opensearch-cluster
+        - name: node.roles
+          value: data
+        - name: discovery.seed_hosts
+          value: opensearch-master
+        - name: OPENSEARCH_JAVA_OPTS
+          value: "-Xms512m -Xmx512m"
+        - name: DISABLE_SECURITY_PLUGIN
+          value: "true"
+

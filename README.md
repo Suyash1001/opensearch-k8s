@@ -1,6 +1,3 @@
-# opensearch-k8s
-OpenSearch deployment on AWS EKS (1 master, 2 data nodes)
-
 # OpenSearch on AWS EKS (Kubernetes)
 
 This project demonstrates deploying an **open-source search engine (OpenSearch)** on **AWS EKS** using Kubernetes.  
